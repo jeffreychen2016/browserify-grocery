@@ -1,8 +1,9 @@
 const getDepartments = require('./departments');
+const buildDomString = require('./doms');
 
 const runOnSuccess = function () {
   const departments = JSON.parse(this.responseText).departments;
-  console.log(departments);
+  buildDomString(departments);
 };
 
 const runOnFailure = function () {
