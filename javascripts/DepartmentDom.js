@@ -1,6 +1,6 @@
 const events = require('./events');
 
-const printToDom = (strang,domID) => {
+const printDepartmentToDom = (strang,domID) => {
   document.getElementById(domID).innerHTML = strang;
   events.addDepartmentEvents();
 };
@@ -15,7 +15,7 @@ const builDomString = (departmentArray) => {
     strang +=   `</div>`;
   });
   strang += `<div>`;
-  printToDom(strang,'departments');
+  printDepartmentToDom(strang,'departments');
 };
 
 module.exports = builDomString;
