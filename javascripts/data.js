@@ -1,19 +1,14 @@
-const getDepartments = require('./departments');
-const buildDomString = require('./doms');
+let departments = [];
 
-const runOnSuccess = function () {
-  const departments = JSON.parse(this.responseText).departments;
-  buildDomString(departments);
+const getDeaprtments = () => {
+  return departments;
 };
 
-const runOnFailure = function () {
-  console.error('XHR Fails');
-};
-
-const initializer = () => {
-  getDepartments(runOnSuccess,runOnFailure);
+const setDepartments = (departmentsArray) => {
+  departments = departmentsArray;
 };
 
 module.exports = {
-  initializer,
+  getDeaprtments,
+  setDepartments,
 };
