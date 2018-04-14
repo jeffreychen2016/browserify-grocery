@@ -1,3 +1,12 @@
 body{
     background-color: blanchedalmond
 }
+
+.department{
+    margin: 20px 0;
+}
+
+.department-img{
+    width: 100%;
+    height:200px;
+}
