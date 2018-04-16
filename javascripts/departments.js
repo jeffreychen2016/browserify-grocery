@@ -1,6 +1,6 @@
-const getDepartments = (runOnSuccess,runOnFailure) => {
+const getDepartments = (whenDepartmentsLoad,runOnFailure) => {
   const departmentsXHR = new XMLHttpRequest();
-  departmentsXHR.addEventListener('load',runOnSuccess);
+  departmentsXHR.addEventListener('load',whenDepartmentsLoad);
   departmentsXHR.addEventListener('error',runOnFailure);
   departmentsXHR.open('GET','../db/departments.json');
   departmentsXHR.send();
