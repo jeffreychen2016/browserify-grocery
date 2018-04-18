@@ -19,6 +19,8 @@ const setItems = (itemsArray) => {
 };
 
 const setCart = (itemId, numberToAdd) => {
+  // map function will create a new array that holds the item IDs,
+  // then check the itemId that selected against with the array created by map
   const itemPosition = items.map(function (item) {
     return item.id;
   }).indexOf(itemId);
