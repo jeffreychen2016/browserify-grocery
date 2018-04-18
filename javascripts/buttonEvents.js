@@ -1,4 +1,5 @@
 const dataGateKeeper = require('./dataGateKeeper');
+const cartDom = require('./cartDom');
 
 const goToDepartments = document.getElementById('go-to-departments');
 const gotToCart = document.getElementById('go-to-cart');
@@ -12,6 +13,7 @@ const cartButton = () => {
     departmentsDiv.innerHTML = '';
     itemsDiv.innerHTML = '';
     cartDiv.innerHTML = '';
+    cartDom();
   });
 };
 

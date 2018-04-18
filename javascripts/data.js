@@ -18,6 +18,10 @@ const setItems = (itemsArray) => {
   items = itemsArray;
 };
 
+const getCart = () => {
+  return cart;
+};
+
 const setCart = (itemId, numberToAdd) => {
   // map function will create a new array that holds the item IDs,
   // then check the itemId that selected against with the array created by map
@@ -46,4 +50,5 @@ module.exports = {
   setItems,
   getItemsByDepartment,
   setCart,
+  getCart,
 };
